@@ -1,9 +1,11 @@
 var express = require('express');
+const userController = require('../controllers/userController');
+const jwtMiddleware = require('../middlewares/jwtMiddleware');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.post('/',  userController.register);
+router.post('/login', userController.login);
+// Ver lógica en jwtMiddleware
+router.get('/saludar', jwtMiddleware, userController.saludar)
 
 module.exports = router;
