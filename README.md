@@ -38,4 +38,18 @@ Ver archivo mdidlewares/jwtMiddleware
 
 
 
+# Para levantar el proyecto
+- Instalar dependencias 
+```
+npm install 
+```
+- Modificar archivo config/config.json con los datos de conexión SQL (usuario, pass y nombre de base de datos). 
+- Ejecutar las migraciones para crear las tablas
+ ```
+npx sequelize-cli db:migrate
+```
+
+
+
+
 
